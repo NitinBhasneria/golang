@@ -11,14 +11,20 @@ type person struct {
 }
 
 func main() {
-	var i I
-	// var bob = person{"Nitin"}
-	describe(i)
+	// var bob = person1{"Nitin"}
+	var jane = person{"Naren"}
 	// describe(bob)
+	var j I
+	j = jane
+	describe(j)
 	// describe(5)
 	// describe("niitn")
 }
 
 func describe(i I) {
-	fmt.Printf("%v", i)
+	i.M()
+}
+
+func (p person) M() {
+	fmt.Printf("%v", p)
 }
